@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/05775e320a.js" crossorigin="anonymous"></script>
+    <!-- css bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- favicon -->
+    <link rel="icon" href="{% static 'favicon1.ico' %}">
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
+    </script>
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'stylecat.css' %}">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- external js -->
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- style="background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(https://issf.vn/lam-gi-bay-gio-de-kiem-tien/imager_10_11473_700.jpg);" -->
+    {% load static %}
+    <!-- <div class="container">
+
+    </div> -->
+    <nav>
+        <div class="col-lg-6">                {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{message.tags}}">{{message}}</div>
+            {% endfor %}
+        {% endif %}</div>
+        <div class="col-lg-6 navSecond">
+        <div class="nav-links" color="black">
+            <ul>
+                <li><a href="{% url 'firstPage'%}">Home<i class="fas fa-laptop"></i></a></li>
+                <li><a href="{% url 'revPage'%}">Reviews</a></li>
+                <!-- hidden buttons -->
+                {% if user.is_authenticated %}
+                    <li><form class="d-flex" id="authstyle">
+                        <a href="{% url 'profile' %}" class="btn" type="submit"
+                            id="header-links"> Profile </a>
+                    </form></li>
+                    <li><form class="d-flex" id="authstyle">
+                        <a href="{% url 'logout' %}" class="btn" type="submit"
+                            id="header-links"> Log Out </a>
+                    </form></li>
+                {% else %}
+                    <li><form class="d-flex" id="authstyle">
+                        <a href="{% url 'regPage' %}" class="btn" type="submit"
+                            id="header-links"> Create Account </a>
+                    </form></li>
+                    <li><form class="d-flex" id="authstyle">
+                        <a href="{% url 'login' %}" class="btn" type="submit"
+                            id="header-links"> Log In </a>
+                    </form></li>
+                {% endif %}
+            </ul>
+        </div>
+        </div>
+
+        </div>
+        </div>
+    </nav>
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

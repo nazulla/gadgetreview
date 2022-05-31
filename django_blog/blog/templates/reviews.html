@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<title>Reviews Page</title>
+
+<section class = "header">
+
+  <div class = "text-box">
+  <h1>Reviews</h1>
+  </div>
+  </section>
+
+
+
+  <section class="main-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 mb-3">
+          <div class="product-card">
+            <div class="product-thumb">
+              <a href="#"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/trade-in-header-202109_FMT_WHH?wid=934&hei=568&fmt=jpeg&qlt=90&.v=1633801099000" alt=""></a>
+            </div>
+            <div class="product-details">
+              <h4><a href="#">Apple products</a></h4>
+              <div class="revi">
+                <a href="{% url 'applePage'%}">press to see</a>
+                <p>Here you may find the rewievs on Apple products</p>
+              </div>
+              <div class="product-bottom-details d-flex justify-content-between">
+                <div class="product-links">
+                  <a href="#"><i class="far fa-heart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-3">
+          <div class="product-card">
+            <div class="product-thumb">
+              <a href="#"><img src="https://www.wipo.int/export/sites/www/ipadvantage/images/article-0231-xiaomi-3-845.png" alt=""></a>
+            </div>
+            <div class="product-details">
+              <h4><a href="#">Xiaomi Products</a></h4>
+              <div class="revi">
+                <a href="{% url 'xiaomiPage'%}">press to see</a>
+                <p>Here you may find the rewievs on Xiaomi products</p>
+              </div>
+              <div class="product-bottom-details d-flex justify-content-between">
+                <div class="product-links">
+                  <a href="#"><i class="far fa-heart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-3">
+          <div class="product-card">
+            <div class="product-thumb">
+              <a href="#"><img src="http://outworldgamers.com/wp-content/uploads/2015/02/xperia-conectividad.jpg" alt=""></a>
+            </div>
+            <div class="product-details">
+              <h4><a href="#">Sony products</a></h4>
+              <div class="revi">
+                <a href="{% url 'sonyPage'%}">press to see</a>
+                <p>Here you may find the rewievs on Sony products</p>
+              </div>
+              <div class="product-bottom-details d-flex justify-content-between">
+                <div class="product-links">
+                  <a href="#"><i class="far fa-heart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+<div class = "footer">
+<a href="https://youtube.com"><i class = "fab fa-youtube"></i></a>
+<a href="https://instagram.com"><i class = "fab fa-instagram"></i></a>
+<a href="https://twitter.com"><i class = "fab fa-twitter"></i></a>
+</div>
+<hr>
+<center><p>Weirdos, MT-2102</p></center>
+
+{% endblock content %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<title>Profile Page</title>
+<div class="container-md" style="color: black;">
+    <br>
+    <br>
+
+    <h1 class="infoPage" style="text-align:center; font: size 200px;">Information about the user</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h4 style="text-align:left; margin-left: 55px">Your username: {{user.username}}</h4>
+    <h4 style="text-align:left; margin-left: 55px">Your email adress: {{user.email}}</h4>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="about-gr" style="text-align: center;">
+        <h2>About gadgetreview</h2>
+        <p>Buying goods in stores, online stores, you can often buy a product that does not meet the stated
+            characteristics, or its quality leaves much to be desired. Why is this happening? You ask, everything is
+            simple - often the characteristics presented in the product description are incomplete or erroneous. Also,
+            consultants in stores often do not have the proper knowledge, or they specifically hide information about
+            quality from you in order to sell the goods faster. Another point is the savings of the manufacturer on the
+            quality of the materials from which the equipment was created. In order not to step on the "rake" - we
+            created this site with reviews of real people who bought low-quality household appliances.</p>
+        <div class="footer">
+            <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+            <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+        </div>
+        <hr>
+        <p> Weirdos, MT-2102</p>
+    </div>
+</div>
+{% endblock content %}

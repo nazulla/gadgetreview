@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<title>Gadgetreview</title>
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+<div class="header">
+<div class = "text-box">
+  <h1>Reviews of gadgets</h1>
+  <br>
+  <br>
+  <a href="{% url 'revPage'%}" class="reg">Reviews</a>
+  </div>
+</div>
+  </section>
+  <div style="background-color:white">
+  <section class = "readus">
+    <h1>Why you should read this website</h1>
+    <div class="row">
+      <div class="reasons-col">
+        <h3>Expert advices</h3>
+        <p>The characteristics, general information and reviews on our website are written by an expert who can be trusted.</p>
+      </div>
+      <div class="reasons-col">
+        <h3>Only up-to-date information</h3>
+        <p>The information is updated every week, so you definitely won't miss new items in the world of technology</p>
+      </div>
+      <div class="reasons-col">
+        <h3>Reviews of real people</h3>
+        <p>Reviews are written by people who have already bought and used that thing, so you can trust them.</p>
+    </div>
+  </section>
+</div>
+
+<!-- Aru's section -->
+<section class = "readus">
+  <h1>Reviews</h1>
+
+    <div class="reasons-col">
+      <h3>Our rewies</h3>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6_9Ci51XAUh3hr79M-bYs4TyuV_CmZ2nX2oldwvVJGqWAqsGwjnWQ-LLGIbQcpmqbQPo&usqp=CAU" alt="">
+      <div class="revi2">
+        <a href="{% url 'revPage'%}">Press to see list of Reviews</a>
+      </div>
+
+      <p>By pressing this button you automatically will be sent to the next page with Reviews. The page is updated regurally.</p>
+    </div>
+</section>
+
+<section class = "testimonials">
+  <h1> What our readers say</h1>
+  <div class ="row">
+    <div class= "testimonials-col">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV-6dBzrXhqhG8ozzzYvDiwLXcYSbaRN7KfA&usqp=CAU" alt="">
+      <div>
+        <p>With the help of this site, I chose a couple of brand-new gadgets, everything came up perfectly.</p>
+      <h4>James</h4>
+    </div>
+    </div>
+    <div class= "testimonials-col">
+      <img src="https://media.istockphoto.com/photos/business-woman-portrait-outdoors-picture-id1078084172?k=20&m=1078084172&s=170667a&w=0&h=eTRruWLFkGTfD7LG01-QIN7fIK9SGNqfJEvwTFFIseg=" alt="">
+      <div>
+        <p>The site helps me to read the characteristics and choose the right equipment for the house.</p>
+      <h4>Mary</h4>
+    </div>
+    </div>
+    <div class= "testimonials-col">
+      <img src="https://www.pennmedicine.org/-/media/images/miscellaneous/random%20generic%20photos/smiling_man_with_beard.ashx?mw=620&mh=408" alt="">
+      <div>
+        <p>Here I read about new products, and also supplement my knowledge about them on YouTube.</p>
+      <h4>Robert</h4>
+    </div>
+  </div>
+  <div class= "testimonials-col">
+    <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg" alt="">
+    <div>
+      <p>I read about new gadgets, as the site is updated frequently, it is convenient to read about new items</p>
+    <h4>Sarah</h4>
+  </div>
+  </div>
+</div>
+
+<div class = "about-gr">
+  <h2>About gadgetreview</h2>
+  <p>Buying goods in stores, online stores, you can often buy a product that does not meet the stated characteristics, or its quality leaves much to be desired. Why is this happening? You ask, everything is simple - often the characteristics presented in the product description are incomplete or erroneous. Also, consultants in stores often do not have the proper knowledge, or they specifically hide information about quality from you in order to sell the goods faster. Another point is the savings of the manufacturer on the quality of the materials from which the equipment was created. In order not to step on the "rake" - we created this site with reviews of real people who bought low-quality household appliances.</p>
+</div>
+<div class = "footer">
+  <a href="https://youtube.com"><i class = "fab fa-youtube"></i></a>
+  <a href="https://instagram.com"><i class = "fab fa-instagram"></i></a>
+  <a href="https://twitter.com"><i class = "fab fa-twitter"></i></a>
+</div>
+<hr>
+<p> Weirdos, MT-2102</p>
+
+  </section>
+
+    <script type="text/javascript">
+      window.addEventListener('scroll', reveal);
+      function reveal(){
+        var reveals=document.querySelector('.reveal');
+  
+          var windowheight=window.innerHeight;
+          var revealtop=reveals.getBoundingClientRect().top;
+          var revealpoint=10;
+  
+          if(revealtop<windowheight-revealpoint){
+            reveals.classList.add('active');
+          }
+          else{
+            reveals.classList.remove('active');
+          }
+        }
+      </script>
+{% endblock content %}
